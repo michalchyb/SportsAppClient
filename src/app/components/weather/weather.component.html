@@ -3,7 +3,7 @@
     <div class="infoWeather__inner">
         <div class="weatherList weatherList--desktop">
             <div class="weatherList__weather weatherList__weather--active">
-                <h3>Today's weather in {{weather.name}}</h3>
+                <h3>Today's weather in {{weather?.name}}</h3>
                 <div class="weatherList__box">
                     <div class="weatherList__boxItems">
                         <div class="weatherList__boxItem">
@@ -36,8 +36,8 @@
                                 </div>
                             </div>
                             <div class="weatherList__boxItemIconWrapper">
-                                 <button (click)="onClick()" class = "refresh_button">
-                                        <i  class="fas fa-sync-alt"></i>
+                                <button (click)="onClick()" class="refresh_button">
+                                    <i class="fas fa-sync-alt"></i>
                                 </button>
                             </div>
                         </div>

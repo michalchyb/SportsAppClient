@@ -1,7 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
-import { HttpClientModule} from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpErrorInterceptor } from './http-error.interceptor';
 
 
 import { AppComponent } from './app.component';
@@ -22,8 +23,14 @@ import { WeatherComponent } from './components/weather/weather.component';
     HttpClientModule
 
   ],
-  schemas: [ NO_ERRORS_SCHEMA ],
-  providers: [],
+  schemas: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: HttpErrorInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

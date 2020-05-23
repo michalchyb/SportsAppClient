@@ -23,7 +23,6 @@
     }
 
     .logo_container {
-        position: absolute;
         height: 100%;
         width: 100%;
     }
@@ -44,3 +43,27 @@
         vertical-align: middle;
         -webkit-transform: translateZ(0);
     }
+    
+    #top-menu,
+    .et-menu,
+    nav#top-menu-nav,
+    nav.et-menu-nav {
+        float: left;
+    }
+
+    #top-menu li {
+        display: inline-block;
+        font-size: 22px;
+        padding-right: 22px;
+    }
+
+#et-top-navigation{
+    padding-left: 161px; 
+    float: right;
+     margin-top:-50px
+   }
+
+   #top-menu li.current-menu-item > a{
+       color : red;
+       font-weight: bold;
+   }

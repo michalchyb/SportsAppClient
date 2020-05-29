@@ -6,24 +6,26 @@ import { HttpErrorInterceptor } from './http-error.interceptor';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './components/header/header.component';
-import { FooterComponent } from './components/footer/footer.component';
-import { WeatherComponent } from './components/weather/weather.component';
+import { HeaderComponent } from './component/header/header.component';
+import { FooterComponent } from './component/footer/footer.component';
+import { WeatherComponent } from './component/weather/weather.component';
 import { SharedModule } from './shared/shared.module';
+import { HomeModule } from './home/home.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    WeatherComponent
+    WeatherComponent,
   ],
   imports: [
     MDBBootstrapModule.forRoot(),
     BrowserModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    SharedModule
+    SharedModule,
+    HomeModule
   ],
   schemas: [],
   providers: [

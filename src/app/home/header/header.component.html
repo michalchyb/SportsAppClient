@@ -4,6 +4,12 @@
     <span id="main">Strona główna</span>
     <span>Bieganie</span>
     <span>Triathlon</span>
-    <span>Programowanie</span>
+    <button mat-flat-button color="primary" class="menu-button" [matMenuTriggerFor]="appMenu">
+      <span id="button" [matMenuTriggerFor]="appMenu">Programowanie</span>
+    </button>
+    <mat-menu #appMenu="matMenu" xPosition="before">
+      <button mat-menu-item color="primary"> FrontEnd</button>
+      <button mat-menu-item color="primary">BackEnd</button>
+    </mat-menu>
   </div>
 </mat-toolbar>

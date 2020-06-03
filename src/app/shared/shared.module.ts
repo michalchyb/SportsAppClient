@@ -11,9 +11,6 @@ import { MatListModule } from '@angular/material/list';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatTableModule } from '@angular/material/table';
 import { MatTabsModule } from '@angular/material/tabs';
-
-
-
 @NgModule({
   declarations: [],
   imports: [
@@ -42,4 +39,4 @@ import { MatTabsModule } from '@angular/material/tabs';
     FlexLayoutModule
   ]
 })
-export class SharedModule { }
+export class SharedModule {}

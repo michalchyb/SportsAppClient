@@ -1,0 +1,114 @@
+.infoWeather {
+    padding: 15px 0 25px 0;
+  
+    &__inner {
+      display: flex;
+      margin: 0 -10px;
+    }
+
+    &--desktop {
+        margin-top: 0;
+      }
+    }
+
+
+.weatherList {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 10px;
+
+    &--desktop {
+        margin-top: 0;
+      }
+
+      &__weather {
+        display: none;
+    
+        &--active {
+          display: block;
+        }
+      }
+      &__box {
+        margin-top: 15px;
+        border-top: 1px solid #e3e3e3;
+      }
+      
+      &__boxItems {
+        padding: 0 32px 25px 32px;
+        border: 1px solid #e3e3e3;
+        border-top: 0;
+      }
+
+      &__boxItem {
+        padding: 27px 0;
+        border-top: 1px solid e3e3e3;
+        overflow: hidden;
+        display: inline-flex;
+    
+        &:first-child {
+          border-top: 0;
+        }
+      }
+      &__boxItemIcon {
+        width: 61px;
+        height: auto;
+      }
+      &__boxItemIconButton {
+        width: 30px;
+        height: auto;
+      }
+
+      &__boxItemContent {
+        float: right;
+        width: calc(100% - 92px);
+      }
+
+      &__boxItemRow {
+        margin-top: 3px;
+        overflow: hidden;
+        display: block;
+      }
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &__boxItemCell {
+        float: left;
+    
+        &:first-child {
+          width: 110px;
+          padding-right: 10px;
+    
+          &:last-child {
+            width: 100%;
+            padding-right: 0;
+          }
+        }
+    
+        &--textBig {
+          font-weight: 700;
+          font-size: 32px;
+          line-height: 1.125;
+    
+        }
+    }
+    &--textMedium {
+        margin-top: 7px;
+        font-weight: 400;
+        font-size: 26px;
+        line-height: 1;
+        color: e3e3e3;
+      }
+      &__boxItemIconWrapper {
+        float: left;
+        width: 92px;
+      }
+
+     
+} 
+
+.refresh_button{
+  background-color:transparent;
+}

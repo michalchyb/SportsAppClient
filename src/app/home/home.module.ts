@@ -6,11 +6,12 @@ import { HeaderComponent } from './header/header.component';
 import { BodyComponent } from './body/body.component';
 import { FooterComponent } from './footer/footer.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { WeatherComponent } from './weather/weather.component';
 
 
 
 @NgModule({
-  declarations: [HomeComponent, HeaderComponent, BodyComponent, FooterComponent, SidebarComponent],
+  declarations: [HomeComponent, HeaderComponent, BodyComponent, FooterComponent, SidebarComponent, WeatherComponent],
   imports: [
     CommonModule,
     SharedModule

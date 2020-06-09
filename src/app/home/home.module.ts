@@ -7,11 +7,12 @@ import { BodyComponent } from './body/body.component';
 import { FooterComponent } from './footer/footer.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { WeatherComponent } from './weather/weather.component';
+import { TweeterComponent } from './tweeter/tweeter.component';
 
 
 
 @NgModule({
-  declarations: [HomeComponent, HeaderComponent, BodyComponent, FooterComponent, SidebarComponent, WeatherComponent],
+  declarations: [HomeComponent, HeaderComponent, BodyComponent, FooterComponent, SidebarComponent, WeatherComponent, TweeterComponent],
   imports: [
     CommonModule,
     SharedModule

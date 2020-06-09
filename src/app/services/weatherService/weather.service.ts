@@ -9,7 +9,7 @@ import { WeatherDto } from 'src/app/models/weather-dto.model';
   providedIn: 'root'
 })
 export class WeatherService {
-  requestUrl = environment.baseUrl + environment.weatherUrl;
+  private requestUrl = environment.baseUrl + environment.weatherUrl;
   token = environment.token;
 
   constructor(private http: HttpClient) { }

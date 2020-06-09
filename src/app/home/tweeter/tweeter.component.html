@@ -1,0 +1,10 @@
+<h3 mat-subheader>Tweeter Timeline</h3>
+<div *ngIf="undefined === tweets">Loading...</div>
+<div *ngIf="undefined !== tweets">
+  <div class="card">
+    <ng-container *ngFor="let tweets of tweets">
+      <p>{{tweets.name}}</p>
+      <p>{{tweets.content}}</p>
+    </ng-container>
+  </div>
+</div>

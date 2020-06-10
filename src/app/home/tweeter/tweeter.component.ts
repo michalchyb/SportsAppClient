@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Tweet } from 'src/app/models/tweet';
 import { TweeterService } from 'src/app/services/tweeterService/tweeter.service';
+import { interval } from 'rxjs';
+import { flatMap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-tweeter',
@@ -17,9 +19,10 @@ export class TweeterComponent implements OnInit {
   }
 
   private getTweets() {
-    this.tweetService.getTweets().subscribe(
-      data => {
-        this.tweets = data;
-      });
+    interval(1 * 60 * 1000)
+      .pipe(
+        flatMap(() => this.tweetService.getTweets())
+      )
+      .subscribe(data => this.tweets = data);
   }
 }

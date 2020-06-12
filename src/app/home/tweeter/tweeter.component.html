@@ -3,8 +3,14 @@
 <div *ngIf="undefined !== tweets">
   <div class="card">
     <ng-container *ngFor="let tweets of tweets">
-      <p><b>{{tweets.author}}</b></p>
+      <div>
+        <a mat-button href="https://www.twitter.com/" target="_blank">
+          <mat-icon svgIcon="twittericon"></mat-icon>
+        </a>
+        <p><b>{{tweets.author}}</b></p>
+      </div>
       <p>{{tweets.content}}</p>
     </ng-container>
   </div>
 </div>
+//TODO one line for div with icon and author. Get from backend twitter acount name to correct link. 

@@ -4,7 +4,7 @@
   <div class="card">
     <ng-container *ngFor="let tweets of tweets">
       <div>
-        <a mat-button href="https://www.twitter.com/" target="_blank">
+        <a mat-button href="https://www.twitter.com/{{tweets.accountName}}" target="_blank">
           <mat-icon svgIcon="twittericon"></mat-icon>
         </a>
         <p><b>{{tweets.author}}</b></p>

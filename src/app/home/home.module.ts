@@ -9,11 +9,12 @@ import { SidebarModule } from './sidebar/sidebar.module';
 import { SliderComponent } from './slider/slider.component';
 
 import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
+import { UploadFilesComponent } from './upload-files/upload-files.component';
 
 
 
 @NgModule({
-  declarations: [HomeComponent, HeaderComponent, BodyComponent, FooterComponent, SliderComponent],
+  declarations: [HomeComponent, HeaderComponent, BodyComponent, FooterComponent, SliderComponent, UploadFilesComponent],
   imports: [
     CommonModule,
     SharedModule,

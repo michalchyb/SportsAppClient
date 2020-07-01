@@ -8,14 +8,18 @@ import { SwiperOptions } from 'swiper';
 })
 export class SliderComponent implements OnInit {
 
-  constructor() { }
+  constructor() { 
+    this.images=[];
+  }
 
   ngOnInit(): void {
   }
+
+  images: any[] = [];
   slideData = [
     {
       id: 382,
-      name: "Metal bluetooth cyan",
+      name: "SportsAppClient/src/assets/weather icons/01d.svg",
     }, {
       id: 822,
       name: "Avon",

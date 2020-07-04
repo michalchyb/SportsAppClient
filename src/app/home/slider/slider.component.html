@@ -10,12 +10,19 @@
     </div>
 
   </div>
-
-  <!-- Add Pagination -->
   <div class="swiper-pagination"></div>
 
-  <!-- Add Arrows -->
   <div class="swiper-button-next"></div>
   <div class="swiper-button-prev"></div>
 
 </swiper>
+<div>
+  <button (click)="openModal('add-medal')">Add medal image</button>
+</div>
+
+<jw-modal id="add-medal" position="relative">
+  <button class="close" (click)="closeModal('add-medal');">X</button>
+  <div class="container" style="width:600px">
+    <app-upload-files></app-upload-files>
+  </div>
+</jw-modal>

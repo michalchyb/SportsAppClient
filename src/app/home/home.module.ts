@@ -10,6 +10,7 @@ import { SliderComponent } from './slider/slider.component';
 
 import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
 import { UploadFilesComponent } from './upload-files/upload-files.component';
+import { ModalModule } from './_modal';
 
 
 
@@ -19,7 +20,8 @@ import { UploadFilesComponent } from './upload-files/upload-files.component';
     CommonModule,
     SharedModule,
     SidebarModule,
-    NgxUsefulSwiperModule
+    NgxUsefulSwiperModule,
+    ModalModule
   ],
   exports: [
     HomeComponent

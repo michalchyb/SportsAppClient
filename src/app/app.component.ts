@@ -12,9 +12,8 @@ export class AppComponent {
 
   constructor(private matIconRegistry: MatIconRegistry, private domSanitizer: DomSanitizer
   ) {
-    this.matIconRegistry.addSvgIcon(
-      "twittericon",
-      this.domSanitizer.bypassSecurityTrustResourceUrl("../assets/twitter.svg")
+    this.matIconRegistry.addSvgIcon("twittericon", this.domSanitizer.bypassSecurityTrustResourceUrl("../assets/twitter.svg"));
+    this.matIconRegistry.addSvgIcon("uploadicon", this.domSanitizer.bypassSecurityTrustResourceUrl("../assets/upload-button.svg")
     );
   }
 }

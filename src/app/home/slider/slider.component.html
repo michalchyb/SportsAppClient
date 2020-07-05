@@ -1,23 +1,25 @@
-<p>slider works!</p>
+<div position="relative">
+  <swiper [config]="config">
 
-<swiper [config]="config">
+    <div class="swiper-wrapper">
 
-  <div class="swiper-wrapper">
+      <div class="swiper-slide" *ngFor="let slide of slideData">
+        <img src="https://i.picsum.photos/id/{{slide.id}}/400/300.jpg" />
+        {{slide.name}}
+      </div>
 
-    <div class="swiper-slide" *ngFor="let slide of slideData">
-      <img src="https://i.picsum.photos/id/{{slide.id}}/400/300.jpg" />
-      {{slide.name}}
     </div>
+    <div class="swiper-pagination"></div>
 
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+
+  </swiper>
+  <div>
+    <a mat-button class = "upload-icon" (click)="openModal('add-medal')">
+      <mat-icon svgIcon="uploadicon"></mat-icon>
+    </a>
   </div>
-  <div class="swiper-pagination"></div>
-
-  <div class="swiper-button-next"></div>
-  <div class="swiper-button-prev"></div>
-
-</swiper>
-<div>
-  <button (click)="openModal('add-medal')">Add medal image</button>
 </div>
 
 <jw-modal id="add-medal" position="relative">

@@ -1,16 +1,13 @@
 <h3 mat-subheader>Tweeter Timeline</h3>
 <div *ngIf="undefined === tweets">Loading...</div>
 <div *ngIf="undefined !== tweets">
-  <div class="card">
-    <ng-container *ngFor="let tweets of tweets">
-      <div>
-        <a mat-button href="https://www.twitter.com/{{tweets.accountName}}" target="_blank">
+    <div *ngFor="let tweets of tweets">
+      <div class="container">
+        <a mat-button href="https://www.twitter.com/{{tweets.accountName}}" target="_blank" float:left>
           <mat-icon svgIcon="twittericon"></mat-icon>
         </a>
-        <p><b>{{tweets.author}}</b></p>
+        <p class="author-name"><b>{{tweets.author}}</b></p>
       </div>
-      <p>{{tweets.content}}</p>
-    </ng-container>
+        <a class="text-content">"{{tweets.content}}"</a>
+    </div>
   </div>
-</div>
-//TODO one line for div with icon and author. Get from backend twitter acount name to correct link. 

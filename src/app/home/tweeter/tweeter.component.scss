@@ -1,0 +1,21 @@
+.container {
+    position : relative;
+    max-height: 400px;
+	overflow: auto;
+}
+
+.container a {
+    float:left;
+}
+
+.container p  {
+    float:left;
+    margin-top: 16px;
+
+}
+
+.text-content{
+    clear:left;
+    margin-top: -20px;
+    margin-bottom: 0px;
+}

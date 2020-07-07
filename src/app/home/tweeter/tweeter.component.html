@@ -1,13 +1,15 @@
 <h3 mat-subheader>Tweeter Timeline</h3>
 <div *ngIf="undefined === tweets">Loading...</div>
 <div *ngIf="undefined !== tweets">
+  <div class="tweets-container">
     <div *ngFor="let tweets of tweets">
-      <div class="container">
-        <a mat-button href="https://www.twitter.com/{{tweets.accountName}}" target="_blank" float:left>
+      <div class = "container">
+        <a class="icon" mat-button href="https://www.twitter.com/{{tweets.accountName}}" target="_blank">
           <mat-icon svgIcon="twittericon"></mat-icon>
         </a>
         <p class="author-name"><b>{{tweets.author}}</b></p>
-      </div>
         <a class="text-content">"{{tweets.content}}"</a>
+      </div>
     </div>
   </div>
+</div>

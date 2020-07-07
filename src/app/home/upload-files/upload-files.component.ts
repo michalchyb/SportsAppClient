@@ -23,7 +23,7 @@ export class UploadFilesComponent implements OnInit {
   }
 
   selectFiles(event) {
-    this.selectFiles = event.target.files;
+    this.selectedFiles = event.target.files;
   }
 
   upload() {

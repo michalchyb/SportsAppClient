@@ -17,7 +17,7 @@ export class UploadFilesService {
     const formData: FormData = new FormData();
     formData.append('file', file);
 
-    const req = new HttpRequest('POST', `${this.requestUrl}/upload`, formData, {
+    const req = new HttpRequest('POST', `${this.requestUrl}upload`, formData, {
       reportProgress: true,
       responseType: 'json'
     });
@@ -25,6 +25,6 @@ export class UploadFilesService {
   }
 
   getFiles(): Observable<any> {
-    return this.http.get(`${this.requestUrl}/upload`);
+    return this.http.get(`${this.requestUrl}files`);
   }
 }

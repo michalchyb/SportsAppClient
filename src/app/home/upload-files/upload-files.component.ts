@@ -15,6 +15,9 @@ export class UploadFilesComponent implements OnInit {
   progress = 0;
   message = '';
   fileInfos: Observable<any>;
+  fileExtension;
+  validation;
+  allowedFilesExtensions: string[] = ['jpg', 'png', 'img'];
 
   constructor(private uploadFilesService: UploadFilesService) { }
 
@@ -24,6 +27,7 @@ export class UploadFilesComponent implements OnInit {
 
   selectFiles(event) {
     this.selectedFiles = event.target.files;
+    this.validation = this.fileValidation();
   }
 
   upload() {
@@ -46,5 +50,27 @@ export class UploadFilesComponent implements OnInit {
       });
 
     this.selectedFiles = undefined;
+  }
+
+  private fileValidation() {
+    return this.extensionValidation();
+  }
+
+  private getExtension(file): null | string {
+    const fileName = file.item(0).name;
+    if (fileName.indexOf('.') === -1) {
+      return null;
+    }
+    return fileName.split('.').pop();
+  }
+
+  private extensionValidation() {
+    this.fileExtension = this.getExtension(this.selectedFiles);
+    if (this.allowedFilesExtensions.indexOf(this.fileExtension) === -1) {
+      this.message = 'Wrong file type!';
+      return null;
+    }
+    this.message = '';
+    return true;
   }
 }

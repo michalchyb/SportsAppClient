@@ -9,7 +9,7 @@
     <input type="file" (change)="selectFiles($event)" />
 </label>
 
-<button class="btn btn-success" [disabled]="!selectedFiles" (click)="upload()">
+<button class="btn btn-success" [disabled]="!selectedFiles || !validation" (click)="upload()">
     Upload
 </button>
 

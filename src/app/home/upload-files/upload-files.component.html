@@ -19,7 +19,10 @@
     <div class="card-header">List of Files</div>
     <ul class="list-group list-group-flush" *ngFor="let file of fileInfos | async">
         <li class="list-group-item">
+            <div class="container">
             <a href="{{ file.url }}">{{ file.name }}</a>
+            <i class="fa fa-trash" aria-hidden="true" (click)="delete(file.name)"></i>
+        </div>
         </li>
     </ul>
 </div>

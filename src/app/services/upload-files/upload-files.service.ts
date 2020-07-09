@@ -7,8 +7,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class UploadFilesService {
-  
-  
+
+
   private requestUrl = environment.baseUrl;
 
   constructor(private http: HttpClient) { }
@@ -26,5 +26,9 @@ export class UploadFilesService {
 
   getFiles(): Observable<any> {
     return this.http.get(`${this.requestUrl}files`);
+  }
+
+  deleteFile(name: string): Observable<any> {
+    return this.http.delete(`${this.requestUrl}delete/${name}`);
   }
 }

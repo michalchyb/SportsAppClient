@@ -15,8 +15,8 @@ export class UploadFilesComponent implements OnInit {
   progress = 0;
   message = '';
   fileInfos: Observable<any>;
-  fileExtension;
-  validation;
+  fileExtension:string;
+  validation:boolean;
   allowedFilesExtensions: string[] = ['jpg', 'png', 'img'];
 
   constructor(private uploadFilesService: UploadFilesService) { }
@@ -50,6 +50,13 @@ export class UploadFilesComponent implements OnInit {
       });
 
     this.selectedFiles = undefined;
+  }
+
+   delete(name) {
+    this.uploadFilesService.deleteFile(name).subscribe(
+      result => console.log(result),
+      err => console.log(err)
+    );
   }
 
   private fileValidation() {

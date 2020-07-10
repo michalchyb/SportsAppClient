@@ -1,19 +1,17 @@
-<mat-toolbar color="primary" class="navbar">
-  <div>
-    <h1>
-      DevRun23.pl
-    </h1>
+<nav class="navbar">
+  <div class="brand-title">DevRun23</div>
+  <a href="#" class="toggle-button">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </a>
+  <div class="navbar-links">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Run</a></li>
+      <li><a href="#">Triathlon</a></li>
+      <li><a href="#">Coding</a>
+      </li>
+    </ul>
   </div>
-  <div>
-    <span id="main">Strona główna</span>
-    <span>Bieganie</span>
-    <span>Triathlon</span>
-    <button mat-flat-button color="primary" class="menu-button" [matMenuTriggerFor]="appMenu">
-      <span id="button" [matMenuTriggerFor]="appMenu">Programowanie</span>
-    </button>
-    <mat-menu #appMenu="matMenu" xPosition="before">
-      <button mat-menu-item color="primary">FrontEnd</button>
-      <button mat-menu-item color="primary">BackEnd</button>
-    </mat-menu>
-  </div>
-</mat-toolbar>
+</nav>

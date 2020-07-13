@@ -8,10 +8,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { HomeModule } from './home/home.module';
+import { LoginComponent } from './login/login.component';
+import { FormsModule } from '@angular/forms';
+
+import { authInterceptorProviders } from './helpers/auth.interceptor';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginComponent
   ],
   imports: [
     MDBBootstrapModule.forRoot(),
@@ -19,10 +25,12 @@ import { HomeModule } from './home/home.module';
     HttpClientModule,
     BrowserAnimationsModule,
     SharedModule,
+    FormsModule,
     HomeModule
   ],
   schemas: [],
   providers: [
+    authInterceptorProviders,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: HttpErrorInterceptor,

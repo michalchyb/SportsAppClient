@@ -11,17 +11,31 @@ import { SliderComponent } from './slider/slider.component';
 import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
 import { UploadFilesComponent } from './upload-files/upload-files.component';
 import { ModalModule } from './_modal';
+import { RunComponent } from './run/run.component';
+import { CodeComponent } from './code/code.component';
+import { RegisterComponent } from './register/register.component';
+import { ProfileComponent } from './profile/profile.component';
+import { BoardAdminComponent } from './board-admin/board-admin.component';
+import { BoardUserComponent } from './board-user/board-user.component';
+
+import { AppRoutingModule } from '../app-routing.module';
+import { FormsModule } from '@angular/forms';
+
+
+
 
 
 
 @NgModule({
-  declarations: [HomeComponent, HeaderComponent, BodyComponent, FooterComponent, SliderComponent, UploadFilesComponent],
+  declarations: [HomeComponent, HeaderComponent, BodyComponent, FooterComponent, SliderComponent, UploadFilesComponent, RunComponent, CodeComponent, RegisterComponent, ProfileComponent, BoardAdminComponent, BoardUserComponent],
   imports: [
     CommonModule,
     SharedModule,
     SidebarModule,
     NgxUsefulSwiperModule,
-    ModalModule
+    ModalModule,
+    AppRoutingModule,
+    FormsModule
   ],
   exports: [
     HomeComponent

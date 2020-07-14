@@ -9,7 +9,6 @@ import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { HomeModule } from './home/home.module';
 import { LoginComponent } from './login/login.component';
-import { FormsModule } from '@angular/forms';
 
 import { authInterceptorProviders } from './helpers/auth.interceptor';
 
@@ -25,7 +24,6 @@ import { authInterceptorProviders } from './helpers/auth.interceptor';
     HttpClientModule,
     BrowserAnimationsModule,
     SharedModule,
-    FormsModule,
     HomeModule
   ],
   schemas: [],

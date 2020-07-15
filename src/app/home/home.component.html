@@ -1,14 +1,10 @@
 <app-header></app-header>
 <app-slider></app-slider>
- <section id="main" fxLayout='row'>
+<section id="main" fxLayout='row'>
     <section class="content" fxFlex="66%">
         <app-body></app-body>
+        <router-outlet></router-outlet>
     </section>
     <app-sidebar fxFlex="34%"></app-sidebar>
 </section>
 <app-footer></app-footer>
-
-
-<div class="container">
-    <router-outlet></router-outlet>
-</div>

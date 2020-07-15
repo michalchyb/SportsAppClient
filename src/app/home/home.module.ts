@@ -20,6 +20,7 @@ import { BoardUserComponent } from './board-user/board-user.component';
 
 import { AppRoutingModule } from '../app-routing.module';
 import { FormsModule } from '@angular/forms';
+import { TriathlonComponent } from './triathlon/triathlon.component';
 
 
 
@@ -27,7 +28,7 @@ import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
-  declarations: [HomeComponent, HeaderComponent, BodyComponent, FooterComponent, SliderComponent, UploadFilesComponent, RunComponent, CodeComponent, RegisterComponent, ProfileComponent, BoardAdminComponent, BoardUserComponent],
+  declarations: [HomeComponent, HeaderComponent, BodyComponent, FooterComponent, SliderComponent, UploadFilesComponent, RunComponent, CodeComponent, RegisterComponent, ProfileComponent, BoardAdminComponent, BoardUserComponent, TriathlonComponent],
   imports: [
     CommonModule,
     SharedModule,

@@ -25,10 +25,9 @@ export class RegisterComponent implements OnInit {
         this.isSignUpFailed = false;
       },
       err => {
-        this.errorMessage = err.error.errorMessage;
         this.isSignUpFailed = true;
+        this.errorMessage = err.error.message;
       }
     );
   }
-
 }

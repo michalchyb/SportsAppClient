@@ -10,6 +10,7 @@ import { BoardAdminComponent } from './home/board-admin/board-admin.component';
 import { CodeComponent } from './home/code/code.component';
 import { RunComponent } from './home/run/run.component';
 import { TriathlonComponent } from './home/triathlon/triathlon.component';
+import { ContactComponent } from './home/contact/contact.component';
 
 
 const routes: Routes = [
@@ -21,6 +22,7 @@ const routes: Routes = [
   { path: 'coding', component: CodeComponent },
   { path: 'run', component: RunComponent },
   { path: 'triathlon', component: TriathlonComponent },
+  { path: 'contact', component: ContactComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' }
 ];
 

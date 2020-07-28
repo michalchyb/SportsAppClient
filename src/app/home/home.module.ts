@@ -22,6 +22,7 @@ import { AppRoutingModule } from '../app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { TriathlonComponent } from './triathlon/triathlon.component';
 import { LoginComponent } from './login/login.component';
+import { ContactComponent } from './contact/contact.component';
 
 
 
@@ -29,7 +30,7 @@ import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
-  declarations: [HomeComponent, HeaderComponent, BodyComponent, FooterComponent, SliderComponent, UploadFilesComponent, RunComponent, CodeComponent, RegisterComponent, ProfileComponent, BoardAdminComponent, BoardUserComponent, TriathlonComponent, LoginComponent],
+  declarations: [HomeComponent, HeaderComponent, BodyComponent, FooterComponent, SliderComponent, UploadFilesComponent, RunComponent, CodeComponent, RegisterComponent, ProfileComponent, BoardAdminComponent, BoardUserComponent, TriathlonComponent, LoginComponent, ContactComponent],
   imports: [
     CommonModule,
     SharedModule,

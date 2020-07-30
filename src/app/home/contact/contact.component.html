@@ -1,59 +1,49 @@
 <div class="col-md-12">
-    <div class="card card-container">
-        <form name="form" (ngSubmit)="onSubmit()" #f="ngForm" novalidate>
-            <div class="form-group">
-                <label for="username">Name</label>
-                <input type="text" class="form-control" name="username" [(ngModel)]="form.username" required
-                    minlength="3" maxlength="20" #username="ngModel" />
-                <div class="alert-danger" *ngIf="f.submitted && username.invalid">
-                    <div *ngIf="username.errors.required">Username is required</div>
-                    <div *ngIf="username.errors.minlength">
-                        Username must be at least 3 characters
-                    </div>
-                    <div *ngIf="username.errors.maxlength">
-                        Username must be at most 20 characters
-                    </div>
-                </div>
+    <form name="form" (ngSubmit)="onSubmit()" #f="ngForm" validate>
+        <div class="name-section">
+            <div class="form">
+                <input type="text" name="username" [(ngModel)]="form.username" required minlength="1" maxlength="20"
+                    #username="ngModel" />
+                <label for="username" class="label-name">
+                    <span class="content-name"> Name</span>
+                </label>
             </div>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" class="form-control" name="email" [(ngModel)]="form.email" required email
-                    #email="ngModel" />
-                <div class="alert-danger" *ngIf="f.submitted && email.invalid">
-                    <div *ngIf="email.errors.required">Email is required</div>
-                    <div *ngIf="email.errors.email">
-                        Email must be a valid email address
-                    </div>
-                </div>
+        </div>
+        <div class="email-section">
+            <div class="form">
+                <input type="email" name="email" [(ngModel)]="form.email" required #email="ngModel" />
+                <label for="email" class="label-name">
+                    <span class="content-name"> Email</span>
+                </label>
             </div>
-            <div class="form-group">
-                <label for="subject">Subject</label>
-                <input type="text" class="form-control" name="subject" [(ngModel)]="form.subject" required minlength="3"
-                    maxlength="20" #subject="ngModel" />
-                <div class="alert-danger" *ngIf="f.submitted && subject.invalid">
-                    <div *ngIf="subject.errors.required">Subject is required</div>
-                    <div *ngIf="subject.errors.minlength">
-                        subject must be at least 3 characters
-                    </div>
-                    <div *ngIf="subject.errors.maxlength">
-                        subject must be at most 20 characters
-                    </div>
-                </div>
+        </div>
+        <div class="subject-section">
+            <div class="form">
+                <input type="text" name="subject" [(ngModel)]="form.subject" required minlength="3" maxlength="300"
+                    #subject="ngModel" />
+                <label for="subject" class="label-name">
+                    <span class="content-name">Subject</span>
+                </label>
             </div>
-            <div class="form-group">
-                <label for="message">Message</label>
-                <textarea type="text" [(ngModel)]="form.message" name="form.message" required="" class="form-control"
-                    id="message" placeholder="Message..."></textarea>
+        </div>
+        <div class="message-content">
+            <div class="form">
+                <textarea type="text" [(ngModel)]="form.message" name="form.message" required="" class="text-area"
+                    id="message" placeholder="Type your massage here..." maxlength="300">
+                </textarea>
             </div>
-            <div class="form-group">
-                <button class="btn btn-primary btn-block">Send</button>
+        </div>
+        <br>
+        <div class="button-content">
+            <div class="form">
+                <button class="btn btn-secondary">Send</button>
             </div>
             <div class="alert alert-warning" *ngIf="f.submitted && !isSuccessful">
-                Message not send!<br />{{ errorMessage }}
+                Message not send! Check your data!<br />
             </div>
-        </form>
-        <div class="alert alert-success" *ngIf="isSuccessful">
-            You send a message!
         </div>
+    </form>
+    <div class="alert alert-success" *ngIf="isSuccessful">
+        You send a message!
     </div>
 </div>

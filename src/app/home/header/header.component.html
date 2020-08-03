@@ -9,16 +9,23 @@
     <ul routerLinkActive="active">
       <li><a href="#">Home</a></li>
       <li><a href="/run">Run</a></li>
+      <!-- <li *ngIf="showAdminBoard"><a href="/coding">Coding</a></li> -->
+      <li *ngIf="showAdminBoard"><a href="#">Coding</a>
+        <ul>
+          <li><a href="/frontend">Frontend</a></li>
+          <li><a href="/backend">Backend</a></li>
+          <li><a href="/soft">Soft</a></li>
+
+        </ul>
+      </li>
       <li><a href="/triathlon">Triathlon</a></li>
       <li><a href="/contact">Contact</a></li>
-      <li *ngIf="showAdminBoard"><a href="/coding">Coding</a></li>
 
       <li *ngIf="!isLoggedIn"><a href="/register" routerLink="register">SignUp</a></li>
       <li *ngIf="!isLoggedIn"><a href="/login" routerLink="login">LogIn</a></li>
 
       <li *ngIf="isLoggedIn"><a href="/profile" routerLink="profile">{{username}}</a></li>
-      <li *ngIf="isLoggedIn"><a href (click)="logout()">Logout</a>
-      </li>
+      <li *ngIf="isLoggedIn"><a href (click)="logout()">Logout</a></li>
     </ul>
   </div>
 </nav>

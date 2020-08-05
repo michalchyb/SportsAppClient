@@ -7,20 +7,17 @@
   </a>
   <div class="navbar-links" [ngClass]="{'active': navbarOpen}">
     <ul routerLinkActive="active">
-      <li><a href="#">Home</a></li>
-      <li><a href="/run">Run</a></li>
-      <!-- <li *ngIf="showAdminBoard"><a href="/coding">Coding</a></li> -->
+      <li><a href="/home" routerLink="home">Home</a></li>
+      <li><a href="/run" routerLink="run">Run</a></li>
       <li *ngIf="showAdminBoard"><a href="#">Coding</a>
         <ul>
-          <li><a href="/frontend">Frontend</a></li>
-          <li><a href="/backend">Backend</a></li>
-          <li><a href="/soft">Soft</a></li>
-
+          <li><a href="/frontend" routerLink="frontend">Frontend</a></li>
+          <li><a href="/backend" routerLink="backend">Backend</a></li>
+          <li><a href="/soft" routerLink="soft">Soft</a></li>
         </ul>
       </li>
-      <li><a href="/triathlon">Triathlon</a></li>
-      <li><a href="/contact">Contact</a></li>
-
+      <li><a href="/triathlon" routerLink="triathlon">Triathlon</a></li>
+      <li><a href="/contact" routerLink="contact">Contact</a></li>
       <li *ngIf="!isLoggedIn"><a href="/register" routerLink="register">SignUp</a></li>
       <li *ngIf="!isLoggedIn"><a href="/login" routerLink="login">LogIn</a></li>
 

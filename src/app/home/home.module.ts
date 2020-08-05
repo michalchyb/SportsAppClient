@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home.component';
 import { SharedModule } from '../shared/shared.module';
 import { HeaderComponent } from './header/header.component';
-import { BodyComponent } from './body/body.component';
 import { FooterComponent } from './footer/footer.component';
 import { SidebarModule } from './sidebar/sidebar.module';
 import { SliderComponent } from './slider/slider.component';
@@ -23,6 +22,7 @@ import { FormsModule } from '@angular/forms';
 import { TriathlonComponent } from './triathlon/triathlon.component';
 import { LoginComponent } from './login/login.component';
 import { ContactComponent } from './contact/contact.component';
+import { MapComponent } from './map/map.component';
 
 
 
@@ -30,7 +30,7 @@ import { ContactComponent } from './contact/contact.component';
 
 
 @NgModule({
-  declarations: [HomeComponent, HeaderComponent, BodyComponent, FooterComponent, SliderComponent, UploadFilesComponent, RunComponent, CodeComponent, RegisterComponent, ProfileComponent, BoardAdminComponent, BoardUserComponent, TriathlonComponent, LoginComponent, ContactComponent],
+  declarations: [HomeComponent, HeaderComponent, FooterComponent, SliderComponent, UploadFilesComponent, RunComponent, CodeComponent, RegisterComponent, ProfileComponent, BoardAdminComponent, BoardUserComponent, TriathlonComponent, LoginComponent, ContactComponent, MapComponent],
   imports: [
     CommonModule,
     SharedModule,

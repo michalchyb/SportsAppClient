@@ -11,6 +11,7 @@ import { CodeComponent } from './home/code/code.component';
 import { RunComponent } from './home/run/run.component';
 import { TriathlonComponent } from './home/triathlon/triathlon.component';
 import { ContactComponent } from './home/contact/contact.component';
+import { MapComponent } from './home/map/map.component';
 
 
 const routes: Routes = [
@@ -23,7 +24,9 @@ const routes: Routes = [
   { path: 'run', component: RunComponent },
   { path: 'triathlon', component: TriathlonComponent },
   { path: 'contact', component: ContactComponent },
-  { path: '', redirectTo: 'home', pathMatch: 'full' }
+  { path: 'home', component: MapComponent },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '**', redirectTo: '/home'}
 ];
 
 

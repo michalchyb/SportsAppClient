@@ -1,33 +1,32 @@
-import { Component, OnInit } from '@angular/core';
-import { latLng, MapOptions, tileLayer } from 'leaflet';
+import { Component, OnInit, ViewChild, ElementRef, Input, AfterViewInit } from '@angular/core';
+import * as Map from 'leaflet';
+
 
 @Component({
   selector: 'app-map',
   templateUrl: './map.component.html',
   styleUrls: ['./map.component.scss']
 })
-export class MapComponent implements OnInit {
+export class MapComponent implements AfterViewInit {
 
-  mapOptions: MapOptions;
+  private map;
 
-  constructor() { }
-  ngOnInit(): void {
+  ngAfterViewInit(): void {
     this.initMap();
   }
-
-  initMap(): void {
-    this.mapOptions = {
-      center: latLng(52.237, 21.017),
-      zoom: 4,
+  private initMap(): void {
+    this.map = Map.map('map', {
+      center: [52.2370, 21.017],
+      zoom: 6,
       layers: [
-        tileLayer(
+        Map.tileLayer(
           'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
           {
             maxZoom: 12,
             attribution: 'Map data © OpenStreetMap contributors'
-          })
-      ],
-    };
-
+          }
+        )
+      ]
+    });
   }
 }

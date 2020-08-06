@@ -23,10 +23,7 @@ import { TriathlonComponent } from './triathlon/triathlon.component';
 import { LoginComponent } from './login/login.component';
 import { ContactComponent } from './contact/contact.component';
 import { MapComponent } from './map/map.component';
-
-
-
-
+import { LeafletModule } from '@asymmetrik/ngx-leaflet';
 
 
 @NgModule({
@@ -38,7 +35,8 @@ import { MapComponent } from './map/map.component';
     NgxUsefulSwiperModule,
     ModalModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    LeafletModule
   ],
   exports: [
     HomeComponent

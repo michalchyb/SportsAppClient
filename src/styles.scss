@@ -5,7 +5,9 @@ $fa-font-path: "@fortawesome/fontawesome-free/webfonts";
 
 @import '~@angular/material/prebuilt-themes/indigo-pink.css';
 @import '~material-icons/iconfont/material-icons.css';
-@import url("https://fonts.googleapis.com/icon?family=Material+Icons")
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import "~leaflet/dist/leaflet.css";
+
 
 // body {
 // padding: 50px 100px;

@@ -1,22 +1,19 @@
-.container {
-    position : relative;
-}
 .tweets-container {
     position : relative;
     max-height: 400px;
 	overflow: auto;
 }
 
-.container a {
-    float:left;
+.container {
+    position : relative;
+    a {
+        float:left;
+    }
+    p {
+        float:left;
+            margin-top: 16px;
+    }
 }
-
-.container p  {
-    float:left;
-    margin-top: 16px;
-
-}
-
 .text-content{
     clear:left;
     margin-top: -20px;

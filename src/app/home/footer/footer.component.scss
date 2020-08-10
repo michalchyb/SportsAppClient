@@ -20,16 +20,14 @@ footer {
 
 .social-media {
 	margin: 20px 0;
-}
-
-.social-media a {
-	margin-right: 25px;
-	font-size: 20px;
-	text-decoration: none;
-}
-
-.social-media a:hover {
-	color: #555;
+	a {
+		margin-right: 25px;
+		font-size: 20px;
+		text-decoration: none;
+		&:hover {
+			color: #555;
+		}
+	}
 }
 
 .col p {
